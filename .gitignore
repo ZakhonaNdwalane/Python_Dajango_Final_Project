@@ -1,0 +1,27 @@
+# created by virtualenv automatically
+# Ignore Python compiled files
+*.pyc
+__pycache__/
+
+migrations
+
+# Ignore the database
+db.sqlite3
+
+# Ignore static files and media
+/static/
+media/
+
+# Ignore system files
+*.log
+.DS_Store
+
+# Ignore virtual environment folders
+venv/
+lib/
+Scripts/
+
+# Ignore environment variables
+*.env
+
+

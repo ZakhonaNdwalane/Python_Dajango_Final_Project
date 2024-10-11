@@ -1,0 +1,34 @@
+{% extends 'Chiliza/base.html' %}
+{% block content %}
+
+<h2>Your Messages</h2>
+
+<!-- Received Messages -->
+<h3>Received Messages</h3>
+<ul>
+    {% for message in received_messages %}
+        <li>
+            <strong>From:</strong> {{ message.sender.username }}<br>
+            <strong>Message:</strong> {{ message.content }}<br>
+            <strong>Received at:</strong> {{ message.timestamp }}
+        </li>
+    {% empty %}
+        <li>No messages received.</li>
+    {% endfor %}
+</ul>
+
+<!-- Sent Messages -->
+<h3>Sent Messages</h3>
+<ul>
+    {% for message in sent_messages %}
+        <li>
+            <strong>To:</strong> {{ message.receiver.username }}<br>
+            <strong>Message:</strong> {{ message.content }}<br>
+            <strong>Sent at:</strong> {{ message.timestamp }}
+        </li>
+    {% empty %}
+        <li>No messages sent.</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
